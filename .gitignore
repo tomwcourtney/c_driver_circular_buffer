@@ -1,5 +1,10 @@
 *.code-workspace
 html
 latex
-/src/user_led.c
-/inc/user_led.h
+*.o
+*.gcov
+*.d
+*.gcda
+*.gcno
+gcov_error.txt
+gcov_output.txt
