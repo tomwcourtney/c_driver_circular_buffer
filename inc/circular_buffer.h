@@ -1,3 +1,14 @@
+/**
+ * @file circular_buffer.h
+ * @author your name (dean@domain.com)
+ * @brief 
+ * @version 0.1
+ * @date 2023-12-12
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
+
 #ifndef CBUF_H
 #define CBUF_H
 
