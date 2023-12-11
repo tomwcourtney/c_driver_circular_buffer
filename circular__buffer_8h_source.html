@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LED Driver: inc/circular_buffer.h Source File</title>
+<title>Circular Buffer: inc/circular_buffer.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LED Driver<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">Circular Buffer<span id="projectnumber">&#160;1.0</span>
    </div>
   </td>
  </tr>
@@ -81,45 +81,55 @@ $(document).ready(function() { init_codefold(0); });
   <div class="headertitle"><div class="title">circular_buffer.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef CBUF_H</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define CBUF_H</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="structcircular__buffer__t.html">   10</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structcircular__buffer__t.html">circular_buffer_t</a></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    uint8_t * buffer;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    uint32_t head;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    uint32_t tail;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    uint32_t capacity;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    uint32_t size;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>} <a class="code hl_struct" href="structcircular__buffer__t.html">circular_buffer_t</a>;</div>
+<a href="circular__buffer_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#ifndef CBUF_H</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define CBUF_H</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="structcircular__buffer__t.html">   21</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structcircular__buffer__t.html">circular_buffer_t</a></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>{</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    uint8_t * buffer;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    uint32_t head;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    uint32_t tail;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    uint32_t capacity;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    uint32_t size;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="circular__buffer_8h.html#a9fbea744e25492c14cdfbb5033e28f73">   28</a></span>} <a class="code hl_struct" href="structcircular__buffer__t.html">circular_buffer_t</a>;</div>
 </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">typedef</span> <span class="keyword">enum</span> cb_status_t</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>{</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    CB_OK,</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    CB_BUFFER_FULL,</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    CB_BUFFER_EMPTY,</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    CB_ZERO_CAPACITY</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>} cb_status_t;</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>cb_status_t circular_buffer_init(<a class="code hl_struct" href="structcircular__buffer__t.html">circular_buffer_t</a> * cbuf, uint8_t * _buffer, uint32_t _capacity);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keywordtype">bool</span> circular_buffer_empty(<a class="code hl_struct" href="structcircular__buffer__t.html">circular_buffer_t</a> * cbuf);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keywordtype">bool</span> circular_buffer_full(<a class="code hl_struct" href="structcircular__buffer__t.html">circular_buffer_t</a> * cbuf);</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>cb_status_t circular_buffer_get(<a class="code hl_struct" href="structcircular__buffer__t.html">circular_buffer_t</a> * cbuf, uint8_t * <span class="keywordtype">byte</span>);</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>uint32_t circular_buffer_size(<a class="code hl_struct" href="structcircular__buffer__t.html">circular_buffer_t</a> * cbuf);</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>cb_status_t circular_buffer_put(<a class="code hl_struct" href="structcircular__buffer__t.html">circular_buffer_t</a> * cbuf, uint8_t <span class="keywordtype">byte</span>);</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="astructcircular__buffer__t_html"><div class="ttname"><a href="structcircular__buffer__t.html">circular_buffer_t</a></div><div class="ttdoc">Structure containing circular buffer metadata and a pointer to the underlying buffer.</div><div class="ttdef"><b>Definition</b> circular_buffer.h:11</div></div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="};">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="circular__buffer_8h.html#ab08058d896184928a595aad7bd53584d">   33</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code hl_enumeration" href="circular__buffer_8h.html#ab08058d896184928a595aad7bd53584d">cb_status_t</a></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>{</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    CB_OK,</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    CB_BUFFER_FULL,</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    CB_BUFFER_EMPTY,</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    CB_ZERO_CAPACITY</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="circular__buffer_8h.html#a0a7679e25a25be880c26db7e482cd543">   39</a></span>} <a class="code hl_enumeration" href="circular__buffer_8h.html#ab08058d896184928a595aad7bd53584d">cb_status_t</a>;</div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="circular__buffer_8h.html#a50e30ecd39cff3915eb14fb6af177769">   51</a></span><a class="code hl_enumeration" href="circular__buffer_8h.html#ab08058d896184928a595aad7bd53584d">cb_status_t</a> <a class="code hl_function" href="circular__buffer_8h.html#a50e30ecd39cff3915eb14fb6af177769">circular_buffer_init</a>(<a class="code hl_struct" href="structcircular__buffer__t.html">circular_buffer_t</a> * cbuf, uint8_t * _buffer, uint32_t _capacity);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="circular__buffer_8h.html#ae34d80d540f48071c5901bb8377854cd">   60</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="circular__buffer_8h.html#ae34d80d540f48071c5901bb8377854cd">circular_buffer_empty</a>(<a class="code hl_struct" href="structcircular__buffer__t.html">circular_buffer_t</a> * cbuf);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="circular__buffer_8h.html#ab7d653fdcfcf7f7d25cba558c0d9570f">   69</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="circular__buffer_8h.html#ab7d653fdcfcf7f7d25cba558c0d9570f">circular_buffer_full</a>(<a class="code hl_struct" href="structcircular__buffer__t.html">circular_buffer_t</a> * cbuf);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="circular__buffer_8h.html#a729a41810de7d852a651348587258131">   79</a></span><a class="code hl_enumeration" href="circular__buffer_8h.html#ab08058d896184928a595aad7bd53584d">cb_status_t</a> <a class="code hl_function" href="circular__buffer_8h.html#a729a41810de7d852a651348587258131">circular_buffer_get</a>(<a class="code hl_struct" href="structcircular__buffer__t.html">circular_buffer_t</a> * cbuf, uint8_t * <span class="keywordtype">byte</span>);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="circular__buffer_8h.html#a248fe178c750d540e98627b5cf86f5b8">   88</a></span>uint32_t <a class="code hl_function" href="circular__buffer_8h.html#a248fe178c750d540e98627b5cf86f5b8">circular_buffer_size</a>(<a class="code hl_struct" href="structcircular__buffer__t.html">circular_buffer_t</a> * cbuf);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="circular__buffer_8h.html#a3c36d1fd15018c9b0fb97d11db3cbefa">   98</a></span><a class="code hl_enumeration" href="circular__buffer_8h.html#ab08058d896184928a595aad7bd53584d">cb_status_t</a> <a class="code hl_function" href="circular__buffer_8h.html#a3c36d1fd15018c9b0fb97d11db3cbefa">circular_buffer_put</a>(<a class="code hl_struct" href="structcircular__buffer__t.html">circular_buffer_t</a> * cbuf, uint8_t <span class="keywordtype">byte</span>);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="acircular__buffer_8h_html_a248fe178c750d540e98627b5cf86f5b8"><div class="ttname"><a href="circular__buffer_8h.html#a248fe178c750d540e98627b5cf86f5b8">circular_buffer_size</a></div><div class="ttdeci">uint32_t circular_buffer_size(circular_buffer_t *cbuf)</div><div class="ttdoc">Get the current number of elements contained within the circular buffer.</div></div>
+<div class="ttc" id="acircular__buffer_8h_html_a3c36d1fd15018c9b0fb97d11db3cbefa"><div class="ttname"><a href="circular__buffer_8h.html#a3c36d1fd15018c9b0fb97d11db3cbefa">circular_buffer_put</a></div><div class="ttdeci">cb_status_t circular_buffer_put(circular_buffer_t *cbuf, uint8_t byte)</div><div class="ttdoc">Insert one element at the head of the buffer.</div></div>
+<div class="ttc" id="acircular__buffer_8h_html_a50e30ecd39cff3915eb14fb6af177769"><div class="ttname"><a href="circular__buffer_8h.html#a50e30ecd39cff3915eb14fb6af177769">circular_buffer_init</a></div><div class="ttdeci">cb_status_t circular_buffer_init(circular_buffer_t *cbuf, uint8_t *_buffer, uint32_t _capacity)</div><div class="ttdoc">Initialise a new circular buffer. You must provide the backing memory.</div></div>
+<div class="ttc" id="acircular__buffer_8h_html_a729a41810de7d852a651348587258131"><div class="ttname"><a href="circular__buffer_8h.html#a729a41810de7d852a651348587258131">circular_buffer_get</a></div><div class="ttdeci">cb_status_t circular_buffer_get(circular_buffer_t *cbuf, uint8_t *byte)</div><div class="ttdoc">Retreive one element from the tail of the buffer. This removes the element.</div></div>
+<div class="ttc" id="acircular__buffer_8h_html_ab08058d896184928a595aad7bd53584d"><div class="ttname"><a href="circular__buffer_8h.html#ab08058d896184928a595aad7bd53584d">cb_status_t</a></div><div class="ttdeci">cb_status_t</div><div class="ttdef"><b>Definition</b> circular_buffer.h:34</div></div>
+<div class="ttc" id="acircular__buffer_8h_html_ab7d653fdcfcf7f7d25cba558c0d9570f"><div class="ttname"><a href="circular__buffer_8h.html#ab7d653fdcfcf7f7d25cba558c0d9570f">circular_buffer_full</a></div><div class="ttdeci">bool circular_buffer_full(circular_buffer_t *cbuf)</div><div class="ttdoc">Check if a circular buffer is full.</div></div>
+<div class="ttc" id="acircular__buffer_8h_html_ae34d80d540f48071c5901bb8377854cd"><div class="ttname"><a href="circular__buffer_8h.html#ae34d80d540f48071c5901bb8377854cd">circular_buffer_empty</a></div><div class="ttdeci">bool circular_buffer_empty(circular_buffer_t *cbuf)</div><div class="ttdoc">Check if a circular buffer is empty.</div></div>
+<div class="ttc" id="astructcircular__buffer__t_html"><div class="ttname"><a href="structcircular__buffer__t.html">circular_buffer_t</a></div><div class="ttdoc">Structure containing circular buffer metadata and a pointer to the underlying buffer.</div><div class="ttdef"><b>Definition</b> circular_buffer.h:22</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
